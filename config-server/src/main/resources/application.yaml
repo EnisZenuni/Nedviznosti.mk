@@ -4,3 +4,8 @@ server:
 spring:
   profiles:
     active: native
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
