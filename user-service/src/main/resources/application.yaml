@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nedviznostiDB
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+#    org.springframework: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# Liquibase Configuration (if needed)
+# spring:
+#   liquibase:
+#     change-log: classpath:db/changelog/db-changelog-master.yaml
