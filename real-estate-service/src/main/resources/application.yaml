@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nedviznostiDB
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+
+  data:
+    mongodb:
+      uri: mongodb+srv://eniszenuni:IygNHIaS4Q0qbjGV@cluster0.fhhf7dl.mongodb.net/?retryWrites=true&w=majority
+      database: Nedviznostidb
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#logging:
+#  level:
+#    #    org.springframework: debug
+#    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# Liquibase Configuration (if needed)
+# spring:
+#   liquibase:
+#     change-log: classpath:db/changelog/db-changelog-master.yaml

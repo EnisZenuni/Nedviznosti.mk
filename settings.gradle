@@ -1,4 +1,4 @@
 rootProject.name = 'Nedviznosti'
-include('discovery-service','config-server','user-service')
+include('discovery-service','config-server','user-service','real-estate-service')
 
 
