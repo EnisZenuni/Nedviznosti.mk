@@ -1,4 +1,37 @@
 rootProject.name = 'Nedviznosti'
-include('discovery-service','config-server','user-service','real-estate-service')
+include('discovery-service','config-server','user-service','real-estate-service','api-gateway')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//spring-cloud-starter-gateway,
+// spring-cloud-starter-config
+// and spring-cloud-starter-netflix-eureka-client
+// dependencies needed to setup an API gateway with an Eureka Client.
