@@ -1,13 +1,17 @@
 server:
   port: 8082
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/nedviznostiDB
     username: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
-
 
   data:
     mongodb:
@@ -22,6 +26,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: real-estate-service
+
+  main:
+    allow-bean-definition-overriding: true
 
 #logging:
 #  level:

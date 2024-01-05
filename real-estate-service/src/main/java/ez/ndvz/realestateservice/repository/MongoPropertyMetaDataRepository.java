@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PropertyMetaDataRepository extends MongoRepository<PropertyMetaData, Long> {
+public interface MongoPropertyMetaDataRepository extends MongoRepository<PropertyMetaData, Long> {
 }
