@@ -1,13 +1,20 @@
 server:
   port: 8081
 
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/nedviznostiDB
     username: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
+  application:
+    name: user-service
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
   jpa:
     database: POSTGRESQL
@@ -20,7 +27,7 @@ spring:
 
 logging:
   level:
-#    org.springframework: debug
+    #    org.springframework: debug
     org.hibernate.SQL: debug
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
