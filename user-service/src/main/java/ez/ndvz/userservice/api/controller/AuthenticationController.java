@@ -1,19 +1,20 @@
 package ez.ndvz.userservice.api.controller;
 
-import ez.ndvz.userservice.api.dto.SignInRequestDTO;
-import ez.ndvz.userservice.api.dto.SignInResponseDTO;
-import ez.ndvz.userservice.api.dto.SignUpRequestDTO;
-import ez.ndvz.userservice.api.dto.SignUpResponseDTO;
+import ez.ndvz.userservice.api.dto.*;
 import ez.ndvz.userservice.service.Interface.AuthenticationService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.Set;
+
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/auth")
+@RequestMapping("/api/v1/auth")
 public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
